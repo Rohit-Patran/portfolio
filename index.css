@@ -1,0 +1,365 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0%;
+    padding: 0%;
+    font-family: sans-serif;
+    z-index: 1;
+}
+
+nav{
+    background-color: #040c52;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 2;
+}
+
+nav .links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+nav section a{
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 1.1vw;
+    padding: 0.5vw 1vw;
+    transition: 0.2s;
+    border-radius: 0.2vw;
+}
+
+nav a:hover{
+    background-color: #eeeeee;
+    color: #040c52;
+}
+
+nav img{
+    width: 10%;
+}
+
+nav div{
+    position: absolute;
+    top: 2vh;
+    right: 5vw;
+    width: 7%;
+    row-gap: 1vw;
+    flex-direction: column;
+    height: 5vh;
+    display: none;
+}
+
+nav div .bar{
+    height: 4px;
+    background-color: white;
+}
+
+.intro{
+    background-color: #eec24e;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.intro img{
+    height: 100%;
+    width: 100%;
+}
+
+.intro .desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1vw;
+    font-size: 2vw;
+}
+
+.intro .desc h1,h3,h5{
+    margin: 0%;
+}
+
+.services{
+    background: linear-gradient(to bottom,#d4c5e2 80%,#c9d7f8);
+}
+.services h1{
+    text-align: center;
+    margin: 0%;
+    padding-top: 2vw;
+}
+
+.services section h3{
+    text-align: center;
+}
+.services .services-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    padding: 0vw 2vw;
+    column-gap: 2vw;
+}
+
+.services-content section img{
+    width: 100%;
+    border-radius: 1vw;
+    margin-top: 0.5vh;
+    height: 80%;
+}
+
+.work{
+    background:linear-gradient(to bottom,#c9d7f8 80%,#a7e2e3) ;
+}
+.work h1{
+    text-align: center;
+    margin: 0 0 5vh;
+    padding: 2vw 0vw 1vw;
+}
+.work .projects-content{
+    display: grid;
+    grid-template-columns: repeat(4,20%);
+    justify-content: center;
+    column-gap: 1vw;
+    padding: 0vw 4vw;
+}
+
+.projects-content section{
+    overflow-y: hidden;
+    height: 50%;
+    transition: 1s;
+}
+
+.projects-content section h3{
+    text-align: center;
+    margin-bottom: 0.5vh;
+}
+
+.work .projects-content section a img{
+    width: 100%;
+    transition: 1s;
+}
+
+.projects-content section img:hover{
+    transform: translateY(-100px);
+}
+
+.contact{
+    background-color: #a7e2e3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contact form{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 0vw 2vw 1vw;
+}
+
+.contact form input,textarea,button{
+    border:none;
+    outline: none;
+    margin: 0.5vh 0vh;
+    padding: 1vh 0.5vw;
+    border-radius: 0.2vw;
+}
+
+.contact form button{
+    width: 40%;
+    display: block;
+    margin: 1vh auto;
+    background-color: dodgerblue;
+    color: #eeeeee;
+    border-radius: 0.2vw;
+}
+
+.icons a img{
+    width:4%;
+    margin: 0vw 1vw 2vh;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    background-color:#c9d7f8;
+}
+.about img{
+    width: 10%;
+    border-radius: 5%;
+    margin-bottom: 5vh;
+}
+
+.about p{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+hr{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-top:2px  rgba(0, 0, 0, 0.4) solid;
+}
+
+footer{
+    background-color: #a7e2e3;
+    text-align: center;
+}
+
+@media screen and (max-width:769px) and (min-width:427px){
+    nav img{
+        width: 40%;
+    }
+
+    nav div{
+        display: flex;
+        top: 5vh;
+    }
+
+    nav .links{
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top:10vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5vh;
+        height: 100vh;
+    }
+
+    nav .links.active{
+        display: flex;
+    }
+
+    nav .links a{
+        color: black;
+        font-size: 5vw;
+    }
+    .intro{
+        grid-template-columns: 100%;
+        grid-template-rows: 70% 30%;
+    }
+
+    .intro .desc{
+        font-size: 4vw;
+    }
+
+    .services h1{
+        margin-bottom: 2vh;
+    }
+    .services .services-content{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .work .projects-content{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,25%);
+        row-gap: 5vh;
+    }
+    .projects-content section{
+        height: 40vh;
+    }
+
+    .contact form{
+        width: 60%;
+        margin-top: 20vh;
+    }
+    .icons a img{
+        width: 7%;
+    }
+    .about img{
+        width: 50%;   
+    }
+
+    .about p{
+        width: 100%;
+        text-align: center;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:426px) {
+    nav img{
+        width: 40%;
+    }
+    nav .links{
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top:6vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5vh;
+        height: 100vh;
+    }
+
+    nav .links a{
+        color: black;
+        font-size: 7vw;
+    }
+    nav .links.active{
+        display: flex;
+    }
+
+    nav div{
+        display: flex;
+        top: 2vh;
+    }
+
+    .intro{
+        grid-template-columns: 100%;
+        grid-template-rows: 70% 30%;
+    }
+
+    .intro .desc{
+        font-size: 4vw;
+    }
+
+    .services h1{
+        margin-bottom: 2vh;
+    }
+    .services .services-content{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .work .projects-content{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,25%);
+        row-gap: 5vh;
+    }
+    .projects-content section{
+        height: 40vh;
+    }
+
+    .contact form{
+        width: 80%;
+        margin-top: 20vh;
+    }
+
+    .icons a img{
+        width: 10%;
+    }
+
+    .about img{
+        width: 80%;   
+    }
+
+    .about p{
+        width: 100%;
+        text-align: center;
+    }
+}
